@@ -25,7 +25,7 @@ const NotFound = () => {
       <div className="flex flex-col sm:flex-row gap-4">
         <Link 
           href="/"
-          className="flex items-center justify-center gap-2 bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+          className="flex items-center justify-center gap-2 bg-black hover:bg-gray-500 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
         >
         
           Back to the Lair (Home)
@@ -40,7 +40,7 @@ const NotFound = () => {
       </div>
 
       {/* Decorative Background Element */}
-      <div className="fixed bottom-0 left-0 w-full h-1 bg-linear-to-r from-orange-500 via-red-600 to-orange-500" />
+      <div className="fixed bottom-0 left-0 w-full h-1 bg-linear-to-r from-black via-gray-800 to-black" />
     </div>
         </div>
     );

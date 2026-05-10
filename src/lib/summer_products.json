@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "UV Protection Sunglasses",
+    "brand": "SunShade",
+    "price": 15,
+    "rating": 4.7,
+    "stock": 10,
+    "description": "Stylish UV protection sunglasses perfect for summer outings.",
+    "image": "https://sunglasswala.com.bd/storage/01KQYBEFS0EH2E49KTN5BB8NM4.webp",
+    "category": "Accessories"
+  },
+  {
+    "id": 2,
+    "name": "Insulated Water Bottle",
+    "brand": "HydroPeak",
+    "price": 25,
+    "rating": 4.9,
+    "stock": 45,
+    "description": "Stays cold for 24 hours. Perfect for hiking and beach days.",
+    "image": "https://images.ctfassets.net/trvmqu12jq2l/7y88khsFuggPjLanhqwydU/c3765ebb8796f70036f729f1b3b11bfd/CxBlog-DD-LEAD.jpg?q=60&w=1200&h=1073&fm=webp&f=faces&fit=fill",
+    "category": "Gear"
+  },
+  {
+    "id": 3,
+    "name": "Quick-Dry Beach Towel",
+    "brand": "SandFree",
+    "price": 20,
+    "rating": 4.5,
+    "stock": 30,
+    "description": "Large microfiber towel that dries quickly and repels sand.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsh80nWUdsKeFcVsczwCvIdB2XApkG8bNLJQ&s",
+    "category": "Beachwear"
+  },
+  {
+    "id": 4,
+    "name": "Portable Neck Fan",
+    "brand": "CoolBreeze",
+    "price": 35,
+    "rating": 4.3,
+    "stock": 15,
+    "description": "Hands-free cooling with 3 speed settings and long battery life.",
+    "image": "https://bigshopbd.com/uploads/4fdd8a1a-dd97-4f66-9b44-167d4e092546/451/681d885267c75_fan_69cc51c2-6a8d-4b20-bed9-a277ce07e863.jpg",
+    "category": "Electronics"
+  },
+  {
+    "id": 5,
+    "name": "Natural SPF 50 Sunscreen",
+    "brand": "EcoShield",
+    "price": 18,
+    "rating": 4.8,
+    "stock": 100,
+    "description": "Reef-safe, water-resistant sunscreen with organic ingredients.",
+    "image": "https://cdn.klassy.com.bd/uploads/products/isntree-hyaluronic-acid-natural-sun-cream-spf-50+-pa++++-50ml-dbdf-products.webp",
+    "category": "Skincare"
+  },
+  {
+    "id": 6,
+    "name": "Foldable Picnic Mat",
+    "brand": "OutdoorLife",
+    "price": 30,
+    "rating": 4.6,
+    "stock": 20,
+    "description": "Waterproof backing and easy-carry handle for park or beach picnics.",
+    "image": "https://5.imimg.com/data5/SELLER/Default/2022/12/VE/NH/UI/61292254/foldable-picnic-mat.jpg",
+    "category": "Gear"
+  }
+]
