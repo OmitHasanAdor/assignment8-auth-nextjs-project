@@ -11,7 +11,7 @@ const Footer = () => {
             </h2>
             <p className=" opacity-80 text-center">Elevating your summer adventures with premium quality gear. From UV protection to eco-friendly skincare, we bring you the essentials you need to beat the heat in style.</p>
           </div>
-          <div className=" flex  justify-around items-center gap-5">
+          <div className=" flex flex-col sm:flex-row  justify-around items-center gap-5">
           <div className=" flex flex-col items-center gap-5">
               <p className=" text-center text-xl font-semibold ">Social Links</p>
            <div className="cont flex gap-5">
@@ -20,9 +20,9 @@ const Footer = () => {
             <div className=""><FaSquareXTwitter /></div>
            </div>
           </div>
-           <div className="">
+           <div className="text-center sm:text-start">
             <h2 className=' text-xl font-semibold'>Contact info</h2>
-          <ul className="">
+          <ul className="  ">
             <li className=" opacity-80">Email: info@suncart.com</li>
             <li className=" opacity-80">Phone: +8801987654321</li>
             <li className=" opacity-80">Address: Kamrangir Char ,Dhaka</li>

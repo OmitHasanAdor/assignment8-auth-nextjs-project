@@ -2,8 +2,8 @@
 
 const SummerTips = () => {
     return (
-       <section className="py-16 bg-blue-50">
-      <div className="max-w-7xl mx-auto px-6">
+       <section className="py-16 ">
+      <div className="max-w-[85%] mx-auto px-6">
         <h2 className="text-3xl font-bold mb-10 text-center">Summer Care Tips</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

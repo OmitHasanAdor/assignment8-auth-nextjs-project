@@ -57,7 +57,7 @@ if (error) {
                             <button className="btn btn-neutral mt-4">Register</button>
                         </fieldset>
                     </form>
-                    <p className=" text-center font-semibold">Don&apos;t have an account? <Link href="/login" className="text-blue-500 hover:underline">Login</Link></p>
+                    <p className=" text-center font-semibold">Have an account? <Link href="/login" className="text-blue-500 hover:underline">Login</Link></p>
                 </div>
             </div>
         </div>

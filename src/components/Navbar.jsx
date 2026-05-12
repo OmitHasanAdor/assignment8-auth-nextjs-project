@@ -1,11 +1,20 @@
+'use client'
 import React from 'react';
 import NavLink from './NavLink';
 import Image from 'next/image';
+import Link from 'next/link';
+import { authClient } from '@/lib/auth-client';
 
 const Navbar = () => {
+
+    const { data: session ,isPending} = authClient.useSession()
+    const user = session?.user;
+    console.log(user)
+
+
     const links=<>
                 <li><NavLink href="/">Home</NavLink></li>
-                <li><NavLink href="/about">Products</NavLink></li>
+                <li><NavLink href="/product">Products</NavLink></li>
                 <li><NavLink href="/login">My Profile</NavLink></li>
             </>
     return (
@@ -21,7 +30,9 @@ const Navbar = () => {
         {links}
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">SunCart</a>
+    <Link href="/" className="btn btn-ghost text-xl">
+      SunCart
+    </Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -29,7 +40,16 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Button</a>
+ { isPending ? <span className="loading loading-spinner loading-lg"></span>
+
+
+        : user ?   <div className=" flex items-center gap-4">
+                <h2>{user && `Hello, ${user.name}` }</h2>
+                <Image src={ user?.image || 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'} alt="User Avatar" width={40} height={40}  className=' rounded-[50%] h-10 w-10'/>
+                  <button className=' btn btn-primary' onClick={async()=>await authClient.signOut()}>Sign Out</button>
+            </div>:
+                <button className=' btn btn-neutral'><Link href="/signin">Sign In</Link></button>
+          }
   </div>
 </div>
     );
