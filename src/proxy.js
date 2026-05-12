@@ -8,13 +8,35 @@ export async function proxy(request) {
     })
     // const isLoggedIn = true;
     // console.log(isLoggedIn)
-   if (session) {
-     return NextResponse.next() 
-   } 
-  return NextResponse.redirect(new URL('/login', request.url))
+  if (session) {
+        return NextResponse.next()
+    }
+
+    // login url
+    const loginUrl = new URL('/login', request.url)
+
+    // current path
+    loginUrl.searchParams.set(
+        "redirect",
+        request.nextUrl.pathname
+    )
+  return NextResponse.redirect(loginUrl)
 }
 
 export const config = {
   matcher: ['/myprofile','/product/:path*'], 
 //   matcher: '/career',
 }
+
+
+/*
+export async function middleware(request) {
+
+    const session = await auth.api.getSession({
+        headers: await headers()
+    })
+
+   
+
+   
+} */
