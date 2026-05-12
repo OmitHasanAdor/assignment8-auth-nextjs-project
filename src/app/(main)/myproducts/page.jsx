@@ -6,7 +6,7 @@ import { FaStar } from 'react-icons/fa';
 const ProductPage = () => {
     return (
         <div>
-              <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 max-w-[85%] md:max-w-[95%] mx-auto">
+              <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 max-w-[95%] md:max-w-[85%] mx-auto">
                 {
                     products.map((item) => {
                         return <div key={item.id} className=' p-5 shadow-md rounded-md space-y-5 flex flex-col'>
