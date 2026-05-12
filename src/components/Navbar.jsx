@@ -14,8 +14,8 @@ const Navbar = () => {
 
     const links=<>
                 <li><NavLink href="/">Home</NavLink></li>
-                <li><NavLink href="/product">Products</NavLink></li>
-                <li><NavLink href="/login">My Profile</NavLink></li>
+                <li><NavLink href="/myproducts">Products</NavLink></li>
+                <li><NavLink href="/myprofile">My Profile</NavLink></li>
             </>
     return (
        <div className="navbar bg-base-100 shadow-sm">
@@ -46,9 +46,9 @@ const Navbar = () => {
         : user ?   <div className=" flex items-center gap-4">
                 <h2>{user && `Hello, ${user.name}` }</h2>
                 <Image src={ user?.image || 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'} alt="User Avatar" width={40} height={40}  className=' rounded-[50%] h-10 w-10'/>
-                  <button className=' btn btn-primary' onClick={async()=>await authClient.signOut()}>Sign Out</button>
+                  <button className=' btn btn-primary' onClick={async()=>await authClient.signOut()}> Log Out</button>
             </div>:
-                <button className=' btn btn-neutral'><Link href="/signin">Sign In</Link></button>
+                <button className=' btn btn-neutral'><Link href="/login">Login</Link></button>
           }
   </div>
 </div>

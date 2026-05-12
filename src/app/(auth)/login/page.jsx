@@ -1,13 +1,15 @@
 'use client'
 import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
+
 import { useForm } from "react-hook-form";
 
 
 const LoginPage = () => {
+     const router = useRouter()
 
-       const router = useRouter()
+const redirectPath = useSearchParams().get("redirect") || "/myprofile"
 
     // react hook form 
     const {register,handleSubmit,watch, formState: { errors }}=useForm()
@@ -18,14 +20,15 @@ const { data:res, error } = await authClient.signIn.email({
     email: data.email,
     password: data.password,
     rememberMe: true,
-    callbackUrl: "/"
+   callbackUrl: redirectPath
 });
 console.log(res, error)
 if (error) {
     alert(`Login failed: ${error.message}`)
 } else if (res) {
     alert("Login successful!")
-        router.push("/myprofile")
+    router.push(redirectPath)
+     
 }
     }
 
