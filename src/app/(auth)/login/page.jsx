@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 
 import { useForm } from "react-hook-form";
+import { toast } from 'react-toastify';
 
 
 const LoginPage = () => {
@@ -24,9 +25,9 @@ const { data:res, error } = await authClient.signIn.email({
 });
 console.log(res, error)
 if (error) {
-    alert(`Login failed: ${error.message}`)
+    toast.error(`Login failed: ${error.message}`)
 } else if (res) {
-    alert("Login successful!")
+    toast.success("Login successful!")
     router.push(redirectPath)
      
 }

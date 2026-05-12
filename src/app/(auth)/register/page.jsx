@@ -21,9 +21,9 @@ const { data:res, error } = await authClient.signUp.email({
 });
 console.log(res, error,data.name, data.email, data.password, data.photo)
 if (error) {
-    alert(`Sign up failed: ${error.message}`)
+    toast.error(`Sign up failed: ${error.message}`)
 } else if (res) {
-    alert("Sign up successful!")
+    toast.success("Sign up successful!")
     router.push("/myprofile")
 }
 }
