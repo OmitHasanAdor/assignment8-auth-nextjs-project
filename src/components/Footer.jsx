@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 import { FaFacebook } from 'react-icons/fa';
 import { FaSquareInstagram, FaSquareXTwitter } from 'react-icons/fa6';
@@ -6,9 +7,12 @@ const Footer = () => {
     return (
          <div className=' bg-black py-10 text-white'>
           <div className="mb-5 max-w-[95%] md:max-w-[70%]  mx-auto space-y-5">
+        <div className=" flex items-center justify-center gap-2">
+               <Image src="/logo.jpg" alt="Logo" width={50} height={50} className=' mr-2 rounded-full' />
             <h2 className=' text-4xl font-bold text-center'>
             SunCart
             </h2>
+        </div>
             <p className=" opacity-80 text-center">Elevating your summer adventures with premium quality gear. From UV protection to eco-friendly skincare, we bring you the essentials you need to beat the heat in style.</p>
           </div>
           <div className=" flex flex-col sm:flex-row  justify-around items-center gap-5">

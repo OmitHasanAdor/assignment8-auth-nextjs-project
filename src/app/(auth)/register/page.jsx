@@ -3,6 +3,7 @@ import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 
 const RegisterPage = () => {
 
@@ -24,7 +25,7 @@ if (error) {
     toast.error(`Sign up failed: ${error.message}`)
 } else if (res) {
     toast.success("Sign up successful!")
-    router.push("/myprofile")
+    router.push("/login")
 }
 }
 

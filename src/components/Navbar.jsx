@@ -31,6 +31,7 @@ const Navbar = () => {
       </ul>
     </div>
     <Link href="/" className="btn btn-ghost text-xl">
+    <Image src="/logo.jpg" alt="Logo" width={30} height={30} className=' mr-2 rounded-full' />
       SunCart
     </Link>
   </div>
