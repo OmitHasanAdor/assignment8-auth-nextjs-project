@@ -32,9 +32,9 @@ const RegisterPage = () => {
         });
         console.log(res, error, data.name, data.email, data.password, data.photo)
         if (error) {
-            toast.error(`Sign up failed: ${error.message}`)
+            toast.error(`Register failed: ${error.message}`)
         } else if (res) {
-            toast.success("Sign up successful!")
+            toast.success("Register successful!")
             router.push("/login")
         }
     }
@@ -70,7 +70,7 @@ const RegisterPage = () => {
                     </form>
                     <p className=" text-center font-semibold">Have an account? <Link href="/login" className="text-blue-500 hover:underline">Login</Link></p>
                     <p className=" block">or</p>
-                    <button className="btn btn-neutral" onClick={handleGoogleSign}><FaGoogle />Register with Google</button>
+                    <button className="btn btn-neutral" onClick={handleGoogleSign}><FaGoogle />Login with Google</button>
                 </div>
             </div>
         </div>

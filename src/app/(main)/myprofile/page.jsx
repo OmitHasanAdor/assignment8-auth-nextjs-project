@@ -5,11 +5,14 @@ import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 
 import { useForm } from "react-hook-form";
-import { FiUser } from 'react-icons/fi';
+import { FiHexagon, FiLogIn, FiSettings, FiUser, FiUserPlus } from 'react-icons/fi';
 import { toast } from 'react-toastify';
 
 
 const MyProfilePage = () => {
+
+    const { data: session ,isPending} = authClient.useSession()
+      const user = session?.user;
 
        const router = useRouter()
     
@@ -39,48 +42,88 @@ const MyProfilePage = () => {
 
     return (
    <div className=" flex flex-col-reverse md:flex-row justify-around gap-10 p-5 max-w-[85%] mx-auto">
-     <div className="flex flex-1">
-      <div className="bg-white border border-gray-200 rounded-3xl shadow-2xl w-full max-w-90 overflow-hidden">
+
+
+<div className="flex flex-1 justify-center items-center min-h-screen bg-gray-50 p-4">
+      <div className="bg-white border border-gray-200 rounded-3xl shadow-2xl w-full max-w-sm overflow-hidden">
         
-      
+        {/* Browser Top Bar */}
         <div className="bg-gray-100 px-5 py-3 flex items-center border-b border-gray-200">
           <div className="flex gap-1.5">
-            <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-            <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-            <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+            <div className="w-3 h-3 bg-red-500 rounded-full animate__animated animate__flash animate__infinite animate__slow"></div>
+            <div className="w-3 h-3 bg-yellow-500 rounded-full animate__animated animate__flash animate__infinite animate__slower"></div>
+            <div className="w-3 h-3 bg-green-500 rounded-full animate__animated animate__flash animate__infinite animate__slow"></div>
           </div>
-          <div className="mx-auto text-gray-400 text-xs font-medium">SunCart - My Profile</div>
         </div>
 
-       
+        {/* Content Area */}
         <div className="p-10 flex flex-col items-center bg-linear-to-b from-white to-gray-50">
           
-          
-          <div className="mb-10">
-            <div className="w-28 h-28 bg-black rounded-2xl flex items-center justify-center shadow-xl">
-              <FiUser className="w-16 h-16 text-white" />
+          {/* Complex Profile Animation Section */}
+          <div className="mb-12 relative">
+            {/* Outer Rotating Hexagon */}
+            <div className="absolute -inset-4 animate__animated animate__rotateIn animate__infinite animate__slower opacity-20">
+              <FiHexagon className="w-36 h-36 text-black" />
+            </div>
+            
+            {/* Main Profile Box with Pulse */}
+            <div className="animate__animated animate__pulse animate__infinite animate__slow w-28 h-28 bg-black rounded-3xl flex items-center justify-center shadow-2xl relative z-10">
+              <FiUser className="animate__animated animate__headShake animate__infinite animate__slower w-14 h-14 text-white" />
+            </div>
+
+            {/* Small Floating Gear Icon */}
+            <div className="absolute -top-2 -right-2 animate__animated animate__rotateIn animate__infinite animate__slow">
+              <FiSettings className="w-6 h-6 text-gray-400" />
             </div>
           </div>
 
-          {/* Big Login Button */}
-          <div className="w-full bg-gray-200 hover:bg-gray-300 transition-all text-white font-semibold text-xl py-5 rounded-2xl text-center shadow-lg mb-8">
-           
-          </div>
-          <div className="w-full bg-gray-200 hover:bg-gray-300 transition-all text-white font-semibold text-xl py-5 rounded-2xl text-center shadow-lg mb-8">
-           
+          {/* Animated Shapes (Buttons alternative) */}
+          <div className="w-full space-y-6">
+            {/* First Shape - Wobble Effect */}
+            <div className="animate__animated animate__wobble animate__infinite animate__slower w-full bg-gray-200 h-16 rounded-2xl shadow-inner border border-gray-300"></div>
+            
+            {/* Second Shape - Swing Effect */}
+            <div className="animate__animated animate__swing animate__infinite animate__slower w-full bg-gray-200 h-16 rounded-2xl shadow-inner border border-gray-300"></div>
+            
+            {/* Third Shape - HeartBeat Effect */}
+            <div className="animate__animated animate__heartBeat animate__infinite animate__slow w-full bg-gray-200 h-16 rounded-2xl shadow-inner border border-gray-300"></div>
           </div>
 
-          {/* Small Branding */}
-          <div className="flex items-center gap-2 text-gray-400">
-            <span className="text-xl"> <Image src="/logo.jpg" alt="Logo" width={50} height={50} className=' mr-2 rounded-full' /></span>
-            <span className="font-medium text-sm">SunCart</span>
+          {/* Logo Section with Bounce and Rotation */}
+          <div className="mt-12 flex flex-col items-center gap-4">
+            <div className="animate__animated animate__bounce animate__infinite animate__slow">
+              <div className="p-1 bg-white rounded-full shadow-lg border border-gray-100 animate__animated animate__flipInY animate__infinite animate__slower">
+                <Image 
+                  src="/logo.jpg" 
+                  alt="Logo" 
+                  width={60} 
+                  height={60} 
+                  className="rounded-full"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
+    <div className="animate__animated animate__bounce animate__infinite">Test</div>
 
-      <div className=" bg-white min-h-[80vh] max-w-125 mx-auto rounded-md shadow-md border-2 border-gray-200 flex-1">
+{  user ?   <div className=" flex flex-col justify-center items-center max-w-125 gap-4 mx-auto flex-1  ">
+               
+          <div className="  border border-gray-300  rounded-2xl py-15 px-10 flex flex-col items-center gap-5 shadow-2xl">
+                 <div className=" border-2 bg-black border-gray-200 rounded-2xl p-5 flex items-center gap-5">
+                 <Image src={ user?.image || 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'} alt="User Avatar" width={100} height={100}  className=' rounded-[50%] h-20 w-20'/>
+               </div>
+                 <h2 className=' text-2xl text-black font-bold'>{user && `Hello, ${user.name}` }</h2>
+                 <h2 className=' text-2xl text-black font-bold'>Welcome to Your Profile</h2>
+                 <Link href="/updateinfo">
+                   <button className='btn btn-neutral'>Update Your Information</button>
+                 </Link>
+          </div>
+                
+            </div>
+      : <div className=" bg-white min-h-[80vh] max-w-125 mx-auto rounded-md shadow-md border-2 border-gray-200 flex-1">
                     <h1 className="text-2xl font-bold text-center py-8 border-b-2 border-gray-300">Login to Your Account</h1>
     
                     <div className=" flex flex-col justify-center items-center py-8">
@@ -101,7 +144,7 @@ const MyProfilePage = () => {
                         </form>
                         <p className=" text-center font-semibold">Don&apos;t have an account? <Link href="/register" className="text-blue-500 hover:underline">Register</Link></p>
                     </div>
-                </div>
+                </div>}
    </div>
     );
 };
