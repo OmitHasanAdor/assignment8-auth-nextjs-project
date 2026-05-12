@@ -44,7 +44,7 @@ const MyProfilePage = () => {
     return (
    <div className=" flex flex-col-reverse md:flex-row justify-around gap-10 p-5 max-w-[85%] mx-auto">
 
-<div className="flex flex-1 justify-center items-center min-h-screen bg-gray-50 p-4">
+<div className="flex flex-1 justify-center md:max-w-[95%] items-center min-h-screen bg-gray-50 p-4">
       <div className="bg-white border border-gray-200 rounded-3xl shadow-2xl w-full max-w-sm overflow-hidden">
         
         {/* Browser Top Bar */}
@@ -107,7 +107,7 @@ const MyProfilePage = () => {
       </div>
     </div>
 
-{  user ?   <div className=" flex flex-col justify-center items-center max-w-125 gap-4 mx-auto flex-1  ">
+{  user ?   <div className=" flex flex-col justify-center items-center max-w-[85%] md:max-w-[95%] gap-4 mx-auto flex-1  ">
                
           <div className="  border border-gray-300  rounded-2xl py-15 px-10 flex flex-col items-center gap-5 shadow-2xl">
                  <div className=" border-2 bg-black border-gray-200 rounded-2xl p-5 flex items-center gap-5">
@@ -121,7 +121,7 @@ const MyProfilePage = () => {
           </div>
                 
             </div>
-      : <div className=" bg-white min-h-[80vh] max-w-125 mx-auto rounded-md shadow-md border-2 border-gray-200 flex-1">
+      : <div className=" bg-white min-h-[80vh] max-w-[85%] md:max-w-[95%] mx-auto rounded-md shadow-md border-2 border-gray-200 flex-1">
                     <h1 className="text-2xl font-bold text-center py-8 border-b-2 border-gray-300">Login to Your Account</h1>
     
                     <div className=" flex flex-col justify-center items-center py-8">

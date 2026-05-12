@@ -49,7 +49,7 @@ if (error) {
             <div className=" flex flex-col-reverse md:flex-row justify-around gap-10 p-5 max-w-[85%] mx-auto">
 
 
-<div className="flex flex-1 justify-center items-center min-h-screen bg-gray-50 p-4">
+<div className="flex flex-1 max-w-[85%] md:max-w-[95%] justify-center items-center min-h-screen bg-gray-50 p-4">
       <div className="bg-white border border-gray-200 rounded-3xl shadow-2xl w-full max-w-sm overflow-hidden">
         
         {/* Browser Top Bar */}
@@ -113,7 +113,7 @@ if (error) {
     </div>
 
 
-            <div className=" flex-1 bg-white min-h-[80vh] max-w-125 mx-auto rounded-md shadow-md border-2 border-gray-200">
+            <div className=" flex-1 bg-white min-h-[80vh] max-w-[85%] md:max-w-[95%] mx-auto rounded-md shadow-md border-2 border-gray-200">
                 <h1 className="text-2xl font-bold text-center py-8 border-b-2 border-gray-300">Login to Your Account</h1>
 
                 <div className=" flex flex-col justify-center items-center py-8">
