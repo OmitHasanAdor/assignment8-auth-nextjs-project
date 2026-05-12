@@ -1,36 +1,24 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SunCart – Summer Essentials Store
 
-## Getting Started
+### SunCart is a modern summer essentials e-commerce web application with secure authentication. It is highly user-friendly and fully responsive. The platform helps users browse products easily through an attractive UI and a smooth shopping experience.
 
-First, run the development server:
+## Technologies Used
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+* React.js
+* Next.js
+* Better Auth
+* React-Toastify (NPM Package)
+* React-icons
+* JavaScript (ES6+)
+* Tailwind CSS
+* DaisyUI 
+* JSON (for product data)
+* Vercel
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features 
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Secure authentication system using Better Auth
+2. Google Authentication integration for quick login/signup
+3. Dynamic routing implementation with Next.js
+4. Fully responsive design for mobile, tablet, and desktop devices
+5. Interactive animations using Animate.css
