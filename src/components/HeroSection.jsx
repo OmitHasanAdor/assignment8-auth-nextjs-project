@@ -56,7 +56,7 @@ const HeroSection = () => {
                   Summer Sale 50% OFF
                 </span>
 
-                <span className="inline-flex items-center gap-x-1.5 rounded-full bg-red-100 px-3 py-1.5 text-xs font-semibold text-red-700 shadow-sm mx-auto absolute top-12 right-20">
+                <span className="inline-flex items-center gap-x-1.5 rounded-full bg-red-100 px-3 py-1.5 text-xs font-semibold text-red-700 shadow-sm mx-auto absolute top-20 left-20">
                   <span className="relative flex h-2 w-2">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>

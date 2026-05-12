@@ -1,16 +1,25 @@
 'use client'
 import { authClient } from '@/lib/auth-client';
+
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 
 import { useForm } from "react-hook-form";
+import { FaGoogle } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 
 
 const LoginPage = () => {
-     const router = useRouter()
 
-const redirectPath = useSearchParams().get("redirect") || "/myprofile"
+    const handleGoogleSign = async () => {
+  const data = await authClient.signIn.social({
+    provider: "google",
+    callbackUrl: redirectPath,
+  });
+};
+
+     const router = useRouter()
+    const redirectPath = useSearchParams().get("redirect") || "/myprofile"
 
     // react hook form 
     const {register,handleSubmit,watch, formState: { errors }}=useForm()
@@ -56,6 +65,8 @@ if (error) {
                         </fieldset>
                     </form>
                     <p className=" text-center font-semibold">Don&apos;t have an account? <Link href="/register" className="text-blue-500 hover:underline">Register</Link></p>
+                    <p className=" block">or</p>
+                     <button className="btn btn-neutral" onClick={handleGoogleSign}><FaGoogle />Login with Google</button>
                 </div>
             </div>
         </div>
