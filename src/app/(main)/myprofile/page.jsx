@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import ProfileAnimation from "@/components/ProfileAnimation";
 import { useForm } from "react-hook-form";
-import { FiHexagon, FiSettings, FiUser } from 'react-icons/fi';
+// import { FiHexagon, FiSettings, FiUser } from 'react-icons/fi';
 import { toast } from 'react-toastify';
 
 
