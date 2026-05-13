@@ -44,7 +44,7 @@ const MyProfilePage = () => {
     return (
    <div className=" flex flex-col-reverse md:flex-row justify-around gap-10 p-5 container mx-auto">
 
-<div className="relative z-10 flex-1 drop-shadow-2xl">
+<div className="relative z-10 flex-1 flex justify-center items-center min-h-[80vh] w-auto shadow-2xl rounded-2xl ">
    <ProfileAnimation
    fileName="Security.lottie"
           className="w-20 h-20"
