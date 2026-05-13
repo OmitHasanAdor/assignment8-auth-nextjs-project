@@ -60,7 +60,7 @@ if (error) {
 
 <div className="relative z-10 flex-1 drop-shadow-2xl">
    <ProfileAnimation 
-   fileName="security.lottie"
+   fileName="Security.lottie"
        className="w-20 h-20"
    />
 </div>
