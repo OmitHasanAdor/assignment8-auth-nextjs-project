@@ -3,7 +3,7 @@ import { authClient } from '@/lib/auth-client';
 // import Image from 'next/image';
 import ProfileAnimation from "@/components/ProfileAnimation";
 import Link from 'next/link';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
 
 import { useForm } from "react-hook-form";
 import { FaGoogle } from 'react-icons/fa';
@@ -15,7 +15,7 @@ const LoginPage = () => {
 
 
   
-     const router = useRouter()
+    //  const router = useRouter()
   const redirectPath = useSearchParams().get("redirect") || "/"
 
     const handleGoogleSign = async () => {
@@ -45,7 +45,7 @@ if (error) {
     toast.error(`Login failed: ${error.message}`)
 } else{
     toast.success("Login successful!")
-    router.push(redirectPath)
+    // router.push(redirectPath)
      
 }
     }
