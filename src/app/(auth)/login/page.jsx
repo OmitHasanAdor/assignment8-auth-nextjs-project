@@ -23,6 +23,12 @@ const LoginPage = () => {
     provider: "google",
     callbackUrl: redirectPath,
   });
+  if (data.error) {
+    toast.error(`Google login failed: ${data.error.message}`);
+  } else {
+    toast.success("Google login successful!");
+    router.push(redirectPath);
+  }
 };
 
 
