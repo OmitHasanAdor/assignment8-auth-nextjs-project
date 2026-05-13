@@ -45,7 +45,7 @@ const Navbar = () => {
 
 
         : user ?   <div className=" flex items-center gap-4">
-                <h2>{user && `Hello, ${user.name}` }</h2>
+                <h2 className=' hidden sm:block '>{user && `Hello, ${user.name}` }</h2>
                 <Image src={ user?.image || 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'} alt="User Avatar" width={40} height={40}  className=' rounded-[50%] h-10 w-10'/>
                   <button className=' btn btn-neutral' onClick={async()=>await authClient.signOut()}> Log Out</button>
             </div>:
