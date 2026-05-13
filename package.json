@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@better-auth/mongo-adapter": "^1.6.10",
+    "@lottiefiles/dotlottie-web": "^0.72.1",
     "animate.css": "^4.1.1",
     "better-auth": "^1.6.10",
     "mongodb": "^7.2.0",
