@@ -16,7 +16,7 @@ const LoginPage = () => {
 
   
      const router = useRouter()
-    const redirectPath = useSearchParams().get("redirect") || "/myprofile"
+   const redirectPath = useSearchParams().get("redirect") || "/product"
 
     const handleGoogleSign = async () => {
   const data = await authClient.signIn.social({
