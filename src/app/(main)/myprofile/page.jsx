@@ -44,8 +44,8 @@ const MyProfilePage = () => {
     return (
    <div className=" flex flex-col-reverse md:flex-row justify-around gap-10 p-5 max-w-[85%] mx-auto">
 
-<div className="flex flex-1 justify-center items-center min-h-screen bg-gray-50 p-4">
-      <div className="bg-white border border-gray-200 rounded-3xl shadow-2xl w-full max-w-sm overflow-hidden">
+<div className="flex flex-1 justify-center items-center min-h-screen bg-gray-50 p-4 mx-auto">
+      <div className="bg-white border border-gray-200 rounded-3xl shadow-2xl w-full overflow-hidden">
         
         {/* Browser Top Bar */}
         <div className="bg-gray-100 px-5 py-3 flex items-center border-b border-gray-200">
@@ -107,7 +107,7 @@ const MyProfilePage = () => {
       </div>
     </div>
 
-{  user ?   <div className=" flex flex-col justify-center items-center max-w-125 gap-4 mx-auto flex-1  ">
+{  user ?   <div className=" flex flex-col justify-center items-center w-full md:max-w-125 gap-4 mx-auto flex-1  ">
                
           <div className="  border border-gray-300  rounded-2xl py-15 px-10 flex flex-col items-center gap-5 shadow-2xl">
                  <div className=" border-2 bg-black border-gray-200 rounded-2xl p-5 flex items-center gap-5">
