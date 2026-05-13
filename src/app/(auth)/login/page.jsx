@@ -61,7 +61,7 @@ if (error) {
 <div className="relative z-10 flex-1 flex justify-center items-center min-h-[80vh] w-auto shadow-md rounded-md border-2 border-gray-200 mx-auto ">
    <ProfileAnimation 
    fileName="Security.lottie"
-       className="min-h-[80vh] w-[80vw]"
+       className="min-h-[80vh] w-auto"
    />
 </div>
 
