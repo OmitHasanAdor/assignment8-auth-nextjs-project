@@ -33,7 +33,7 @@ const MyProfilePage = () => {
     console.log(res, error)
     if (error) {
         toast.error(`Login failed: ${error.message}`)
-    } else if (res) {
+    } else{
         toast.success("Login successful!")
         router.push(redirectPath)
          

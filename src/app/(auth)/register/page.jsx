@@ -8,7 +8,10 @@ import { toast } from 'react-toastify';
 
 const RegisterPage = () => {
 
+  const router = useRouter()
+     const redirectPath = useSearchParams().get("redirect") || "/myprofile"
 
+     
     const handleGoogleSign = async () => {
         const data = await authClient.signIn.social({
             provider: "google",
@@ -16,8 +19,7 @@ const RegisterPage = () => {
         });
     };
 
-    const router = useRouter()
-     const redirectPath = useSearchParams().get("redirect") || "/myprofile"
+  
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm()
 

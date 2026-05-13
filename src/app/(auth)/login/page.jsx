@@ -25,10 +25,7 @@ const LoginPage = () => {
   });
   if (data.error) {
     toast.error(`Google login failed: ${data.error.message}`);
-  } else {
-    toast.success("Google login successful!");
-    router.push(redirectPath);
-  }
+  } 
 };
 
 
@@ -46,7 +43,7 @@ const { data:res, error } = await authClient.signIn.email({
 console.log(res, error)
 if (error) {
     toast.error(`Login failed: ${error.message}`)
-} else if (res) {
+} else{
     toast.success("Login successful!")
     router.push(redirectPath)
      
