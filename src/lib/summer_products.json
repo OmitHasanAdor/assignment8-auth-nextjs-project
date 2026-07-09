@@ -117,7 +117,7 @@
     "rating": 4.9,
     "stock": 50,
     "description": "Stays cold for 24 hours. Perfect for hiking and beach days.",
-    "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=500",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROoncI1vILmYh2CkqdMOAponIpulWyceb_O_DcaZdnJw&s=10",
     "category": "Gear"
   },
   {
@@ -128,7 +128,7 @@
     "rating": 4.6,
     "stock": 35,
     "description": "Double-wall vacuum insulated bottle to keep your drinks ice cold.",
-    "image": "https://images.unsplash.com/photo-1523362628745-0c100150b504?w=500",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA7pkUzhQ_mGDbBaAnPFjrN2Y4YkcldlUVZDoZBiAxjA&s=10",
     "category": "Gear"
   },
   {
@@ -139,7 +139,7 @@
     "rating": 4.4,
     "stock": 60,
     "description": "Ergonomic sport water bottle with a leak-proof straw lid.",
-    "image": "https://images.unsplash.com/photo-1594541785563-3ca0d49b01da?w=500",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCqwdCzwM91yYq_9xrJdQCbs5YyauMynsrDf42sXzmbg&s=10",
     "category": "Gear"
   },
   {
@@ -150,7 +150,7 @@
     "rating": 4.8,
     "stock": 20,
     "description": "Premium matte finish stainless steel bottle for heavy summer usage.",
-    "image": "https://images.unsplash.com/photo-1618359057956-37619336588b?w=500",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKMTURgqibxkFvIWSWw6dzGboLk_lV5JVnHqDAzUxiTw&s=10",
     "category": "Gear"
   },
   {
@@ -172,7 +172,7 @@
     "rating": 4.4,
     "stock": 45,
     "description": "Ultra-absorbent lightweight travel towel perfect for swimming pools.",
-    "image": "https://images.unsplash.com/photo-1528740561666-424779272661?w=500",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0UeshlFkjezgJdtmF47LPq5I0O3jGc6AZGbI_LG61aw&s",
     "category": "Beachwear"
   },
   {
@@ -194,7 +194,7 @@
     "rating": 4.6,
     "stock": 40,
     "description": "Compact folding microfiber towel designed for beach lovers and travelers.",
-    "image": "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=500",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYmzCb_gfxS47hcJoq9pjQHbLTUKprezjrPoYFgb7XqQ&s=10",
     "category": "Beachwear"
   },
   {
@@ -238,7 +238,7 @@
     "rating": 4.7,
     "stock": 60,
     "description": "Moisturizing sunscreen lotion infused with vitamins for sensitive skin.",
-    "image": "https://images.unsplash.com/photo-1608248597481-496100c8c836?w=500",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO7T-cc891EuWL3fpVD3qPgfBfaZWTLfHYsXdsumMhiQ&s=10",
     "category": "Skincare"
   },
   {
@@ -249,7 +249,7 @@
     "rating": 4.6,
     "stock": 20,
     "description": "Waterproof backing and easy-carry handle for park or beach picnics.",
-    "image": "https://images.unsplash.com/photo-1576016770956-debb63d900bb?w=500",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwPgep7Q72M0yf6khfUbEnm2B1VM69ZtGPIx6PiQWJ5A&s=10",
     "category": "Gear"
   },
   {
@@ -260,7 +260,7 @@
     "rating": 4.5,
     "stock": 15,
     "description": "Extra large sand-proof pocket blanket for family beach gatherings.",
-    "image": "https://images.unsplash.com/photo-1596239308755-b156ff3c448d?w=500",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSuFa-UY7pk78-CE0XlaktG17gkUSepDNE74HTVAChDw&s=10",
     "category": "Gear"
   },
   {
@@ -271,7 +271,7 @@
     "rating": 4.4,
     "stock": 25,
     "description": "Hands-free cooling with 3 speed settings and long-lasting battery life.",
-    "image": "https://images.unsplash.com/photo-1624996379697-f01d168b1a52?w=500",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQisJ47zYpJiO4u2lnkirY6QZ3ZznVVg3DeUgsM66vjQg&s=10",
     "category": "Electronics"
   },
   {
@@ -282,7 +282,7 @@
     "rating": 4.7,
     "stock": 12,
     "description": "Bladeless wearable neck fan providing a silent and strong 360° airflow.",
-    "image": "https://images.unsplash.com/photo-1541817144211-133504fb3b94?w=500",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH_2PQx8Py_zx781m2k6z-ieVoXW3SC2wXO4AEOgeOrQ&s=10",
     "category": "Electronics"
   }
 ]
