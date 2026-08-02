@@ -3,8 +3,13 @@
 import { useEffect, useRef } from "react";
 import { DotLottie } from "@lottiefiles/dotlottie-web";
 
-const ProfileAnimation = ({ fileName, className }) => {
-  const canvasRef = useRef(null);
+type ProfileAnimationProps = {
+  fileName: string;
+  className?: string;
+};
+
+const ProfileAnimation = ({ fileName, className }: ProfileAnimationProps) => {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     if (!canvasRef.current) return;
@@ -24,8 +29,8 @@ const ProfileAnimation = ({ fileName, className }) => {
   return (
     <canvas
       ref={canvasRef}
-      width="300"
-      height="300"
+      width={300}
+      height={300}
       className={className}
     />
   );
