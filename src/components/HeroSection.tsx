@@ -74,7 +74,7 @@ const HeroSection = () => {
                 </motion.button>
               </Link>
 
-              <Link href={`/product/${featuredProduct.id ?? 1}`}>
+              {/* <Link href={`/product/${featuredProduct.id ?? 1}`}>
                 <motion.button
                   whileHover={{ scale: 1.04 }}
                   whileTap={{ scale: 0.97 }}
@@ -82,7 +82,7 @@ const HeroSection = () => {
                 >
                   View Featured Item
                 </motion.button>
-              </Link>
+              </Link> */}
             </div>
           </motion.div>
 
