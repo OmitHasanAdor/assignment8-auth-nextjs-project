@@ -82,7 +82,7 @@ const PopularProduct = () => {
       </div>
 
       <div className="mt-12 flex justify-center">
-        <Link href="/products">
+        <Link href="/myproducts">
           <button className="btn btn-outline btn-neutral rounded-xl px-8">
             View All Products
           </button>

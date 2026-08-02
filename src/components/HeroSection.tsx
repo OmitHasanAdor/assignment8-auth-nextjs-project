@@ -35,11 +35,11 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 rounded-full bg-amber-100 px-4 py-1.5 text-sm font-semibold text-amber-800"
+              className="inline-flex items-center gap-2 rounded-full bg-black px-4 py-1.5 text-sm font-semibold text-white shadow-lg shadow-black/20 sm:text-base"
             >
               <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-400 opacity-75" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-amber-500" />
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-white" />
               </span>
               Summer Collection 2026
             </motion.span>
@@ -98,7 +98,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="absolute -top-3 left-4 z-20 inline-flex items-center gap-1.5 rounded-full bg-red-500 px-3 py-1.5 text-xs font-bold text-white shadow-lg sm:left-8"
+              className="absolute -top-3 left-4 z-20 inline-flex items-center gap-1.5 rounded-full bg-black  px-3 py-1.5 text-xs font-bold text-white shadow-lg sm:left-8"
             >
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white opacity-75" />
@@ -111,7 +111,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.65 }}
-              className="absolute top-8 right-4 z-20 inline-flex items-center rounded-full bg-amber-400 px-3 py-1.5 text-xs font-bold text-gray-900 shadow-lg sm:right-6"
+              className="absolute -top-3 right-4 z-20 inline-flex items-center rounded-full bg-black px-3 py-1.5 text-xs font-bold text-white shadow-lg sm:right-6"
             >
               🔥 Hot Deal
             </motion.span>
