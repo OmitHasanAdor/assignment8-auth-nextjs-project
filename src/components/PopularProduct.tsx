@@ -1,7 +1,7 @@
 import products from "@/lib/summer_products.json";
 import Image from "next/image";
 import Link from "next/link";
-import { FaStar } from "react-icons/fa";
+import { FaArrowRight, FaStar } from "react-icons/fa";
 
 type Product = {
   id: number;
@@ -18,47 +18,77 @@ const PopularProduct = () => {
   );
 
   return (
-    <div>
-      <h2 className="mb-4 text-center text-4xl font-bold">Popular Products</h2>
+    <section className="mx-auto max-w-7xl px-4 py-14">
+      <div className="mb-10 text-center">
+        <h2 className="text-4xl font-bold">Popular Products</h2>
+        <p className="mt-3 text-gray-500">
+          Discover our most loved summer essentials.
+        </p>
+      </div>
 
-      <div className="mx-auto grid max-w-[95%] grid-cols-1 gap-4 p-4 md:max-w-[85%] md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {popularProducts.map((item) => (
           <div
             key={item.id}
-            className="flex flex-col space-y-5 rounded-md p-5 shadow-md"
+            className="group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
           >
-            <h2 className="line-clamp-1 text-2xl font-bold">{item.name}</h2>
-            <p className="text-gray-600">{item.description}</p>
-
-            <div className="grow">
+            {/* Image */}
+            <div className="overflow-hidden">
               <Image
                 src={item.image}
                 alt={item.name}
-                width={300}
-                height={200}
-                className="h-60 w-full object-cover"
+                width={500}
+                height={350}
+                className="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
             </div>
 
-            <div className="flex flex-col justify-between text-start sm:flex-row">
-              <p className="mt-auto text-xl font-bold">
-                $ {item.price.toFixed(2)}
-              </p>
-              <p className="flex items-center gap-2">
-                <FaStar />
-                Ratings : {item.rating} out of 5
-              </p>
-            </div>
+            {/* Content */}
+            <div className="space-y-4 p-5">
+              <div className="flex items-start justify-between gap-3">
+                <h2 className="line-clamp-1 text-xl font-bold">
+                  {item.name}
+                </h2>
 
-            <Link href={`/product/${item.id}`}>
-              <button className="btn btn-neutral btn-outline w-full">
-                View Details
-              </button>
-            </Link>
+                <span className="flex items-center gap-1 rounded-full bg-yellow-100 px-2 py-1 text-sm font-semibold text-yellow-700">
+                  <FaStar className="text-yellow-500" />
+                  {item.rating}
+                </span>
+              </div>
+
+              <p className="line-clamp-2 text-sm leading-6 text-gray-600">
+                {item.description}
+              </p>
+
+              <div className="flex items-center justify-between">
+                <p className="text-2xl font-bold text-green-600">
+                  ${item.price.toFixed(2)}
+                </p>
+
+                <span className="text-sm text-gray-500">
+                  ⭐ {item.rating}/5
+                </span>
+              </div>
+
+              <Link href={`/product/${item.id}`}>
+                <button className="btn btn-neutral w-full rounded-xl">
+                  View Details
+                  <FaArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+                </button>
+              </Link>
+            </div>
           </div>
         ))}
       </div>
-    </div>
+
+      <div className="mt-12 flex justify-center">
+        <Link href="/products">
+          <button className="btn btn-outline btn-neutral rounded-xl px-8">
+            View All Products
+          </button>
+        </Link>
+      </div>
+    </section>
   );
 };
 
