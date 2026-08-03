@@ -1,30 +1,35 @@
+// import { mongodbAdapter } from "@better-auth/mongo-adapter";
 import { betterAuth } from "better-auth";
 import { MongoClient } from "mongodb";
 import { mongodbAdapter } from "better-auth/adapters/mongodb";
 
-const client = new MongoClient(process.env.ASS8_MONGO_URI);
-const db = client.db('assignment8-nextjs-project');
+// ১. URI বিদ্যমান আছে কিনা নিশ্চিত করা
+const uri = process.env.ASS8_MONGO_URI;
+if (!uri) {
+  throw new Error("ASS8_MONGO_URI is missing in .env.local file");
+}
 
-const trustedOrigins = [
-  "http://localhost:3000",
-  "http://127.0.0.1:3000",
-  "https://assignment8-auth-nextjs-project.vercel.app",
-  process.env.NEXT_PUBLIC_BETTER_AUTH_URL,
-  process.env.BETTER_AUTH_URL,
-].filter(Boolean) as string[];
+const client = new MongoClient(uri);
+const db = client.db("assignment8-nextjs-project");
 
 export const auth = betterAuth({
-  baseURL: process.env.NEXT_PUBLIC_BETTER_AUTH_URL || "http://localhost:3000",
-  trustedOrigins,
+  // অরিজিন অনুমোদন দেওয়া (Local + Live Production)
+  trustedOrigins: [
+    "http://localhost:3000",
+    "https://assignment8-auth-nextjs-project.vercel.app",
+  ],
+
   emailAndPassword: {
     enabled: true,
   },
+
   socialProviders: {
     google: {
-      clientId: process.env.GOOGLE_CLIENT_ID,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+      clientId: process.env.GOOGLE_CLIENT_ID as string,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
     },
   },
+
   database: mongodbAdapter(db, {
     client,
   }),

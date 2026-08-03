@@ -1,6 +1,9 @@
-
+import type { Metadata } from "next";
+import type { ReactNode } from "react";
 
 import "./globals.css";
+import "animate.css";
+
 import { Geist, Geist_Mono } from "next/font/google";
 import { ToastContainer } from "react-toastify";
 
@@ -14,30 +17,29 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "SunCart-Summer Essentials",
-  description: "Discover the ultimate destination for all your summer needs at SunCart. From trendy swimwear and stylish sunglasses to beach accessories and outdoor gear, we have everything you need to make the most of the sunny season. Shop now and get ready for a summer filled with fun, fashion, and unforgettable memories!",
+export const metadata: Metadata = {
+  title: "SunCart - Summer Essentials",
+  description:
+    "Discover the ultimate destination for all your summer needs at SunCart. From trendy swimwear and stylish sunglasses to beach accessories and outdoor gear, we have everything you need to make the most of the sunny season. Shop now and get ready for a summer filled with fun, fashion, and unforgettable memories!",
 };
 
-export default function RootLayout({ children }) {
+interface RootLayoutProps {
+  children: ReactNode;
+}
+
+export default function RootLayout({
+  children,
+}: RootLayoutProps) {
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
       data-theme="light"
     >
-
-      <head>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
-</head>
-
-      <body className="min-h-full flex flex-col">
+      <body className="flex min-h-full flex-col">
         {children}
-         <ToastContainer />
-        </body>
+        <ToastContainer />
+      </body>
     </html>
   );
 }
