@@ -29,3 +29,12 @@
 4. **Fully Responsive Design:** A clean, adaptive layout that works flawlessly across mobile, tablet, and desktop screens.
 5. **Interactive Animations:** Smooth entrance and hover animations using Animate.css for a more engaging shopping experience.
 6. **Toast Notifications:** Real-time feedback (success, error, and info alerts) using React-Toastify for actions like adding to cart or login status.
+
+---
+
+## 🔗 Project Links
+
+| Resource | Link |
+|---|---|
+| 🌐 Live Site | [assignment8-auth-nextjs-project.vercel.app](https://assignment8-auth-nextjs-project.vercel.app/) |
+| 💻 GitHub Repository | [github.com/OmitHasanAdor/assignment8-auth-nextjs-project](https://github.com/OmitHasanAdor/assignment8-auth-nextjs-project) |
