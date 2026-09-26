@@ -1,7 +1,10 @@
+"use client";
+
 import products from "@/lib/summer_products.json";
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight, FaStar } from "react-icons/fa";
+import { motion, Variants } from "framer-motion";
 
 type Product = {
   id: number;
@@ -12,27 +15,63 @@ type Product = {
   rating: number;
 };
 
+const containerVariants: Variants = {
+  hidden: {},
+  show: {
+    transition: { staggerChildren: 0.12 },
+  },
+};
+
+const cardVariants: Variants = {
+  hidden: { opacity: 0, y: 32 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
+};
+
 const PopularProduct = () => {
   const popularProducts = (products as Product[]).filter(
     (item) => item.id <= 3
   );
 
   return (
-    <section className="mx-auto max-w-7xl px-4 py-14">
-      <div className="mb-10 text-center">
-        <h2 className="text-4xl font-bold">Popular Products</h2>
-        <p className="mt-3 text-gray-500">
+    <section className="mx-auto max-w-7xl px-4 py-16 sm:py-20">
+      {/* Heading */}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.55 }}
+        viewport={{ once: true }}
+        className="mb-12 text-center"
+      >
+        <span className="inline-flex rounded-full bg-sky-100 px-4 py-1.5 text-sm font-semibold text-sky-700">
+          Best Sellers
+        </span>
+        <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+          Popular Products
+        </h2>
+        <p className="mt-3 text-slate-500">
           Discover our most loved summer essentials.
         </p>
-      </div>
+      </motion.div>
 
-      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {/* Cards */}
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.15 }}
+        className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
+      >
         {popularProducts.map((item) => (
-          <div
+          <motion.div
             key={item.id}
-            className="group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+            variants={cardVariants}
+            whileHover={{ y: -8 }}
+            className="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-shadow duration-300 hover:shadow-xl"
           >
-            {/* Image */}
             <div className="overflow-hidden">
               <Image
                 src={item.image}
@@ -43,13 +82,11 @@ const PopularProduct = () => {
               />
             </div>
 
-            {/* Content */}
             <div className="space-y-4 p-5">
               <div className="flex items-start justify-between gap-3">
-                <h2 className="line-clamp-1 text-xl font-bold">
+                <h2 className="line-clamp-1 text-xl font-bold text-slate-900">
                   {item.name}
                 </h2>
-
                 <span className="flex items-center gap-1 rounded-full bg-yellow-100 px-2 py-1 text-sm font-semibold text-yellow-700">
                   <FaStar className="text-yellow-500" />
                   {item.rating}
@@ -61,13 +98,9 @@ const PopularProduct = () => {
               </p>
 
               <div className="flex items-center justify-between">
-                <p className="text-2xl font-bold text-green-600">
+                <p className="text-2xl font-bold text-sky-600">
                   ${item.price.toFixed(2)}
                 </p>
-
-                <span className="text-sm text-gray-500">
-                  ⭐ {item.rating}/5
-                </span>
               </div>
 
               <Link href={`/product/${item.id}`}>
@@ -77,17 +110,23 @@ const PopularProduct = () => {
                 </button>
               </Link>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
 
-      <div className="mt-12 flex justify-center">
+      <motion.div
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        viewport={{ once: true }}
+        className="mt-12 flex justify-center"
+      >
         <Link href="/myproducts">
           <button className="btn btn-outline btn-neutral rounded-xl px-8">
             View All Products
           </button>
         </Link>
-      </div>
+      </motion.div>
     </section>
   );
 };
